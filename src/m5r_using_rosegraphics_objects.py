@@ -88,6 +88,8 @@ def main():
 def example1():
     """ Displays an empty window. """
     window = rg.RoseWindow(500, 300, 'Example 1: An empty window')
+    window.pause
+
     window.close_on_mouse_click()
 
 
