@@ -148,7 +148,7 @@ class RoseWindow(object):
 
     def __init__(self, width=400, height=300, title='Rose Graphics',
                  color='black', canvas_color=None,
-                 make_initial_canvas=True):
+                 make_initial_canvas=True) -> object:
         """
 
         Pops up a   tkinter.Toplevel   window with (by default)
