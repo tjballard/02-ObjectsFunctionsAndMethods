@@ -14,7 +14,9 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    two_circles()
+    # two_circles()
+    # circle_and_rectangle()
+    lines()
 
 def two_circles():
     """
@@ -76,8 +78,32 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+    window = rg.RoseWindow()
+    point1 = rg.Point(50, 100)
+    point2 = rg.Point(200,150)
+    point3 = rg.Point(215,175)
+    circle = rg.Circle(point1, 15)
+    circle.outline_thickness = 1
+    circle.fill_color = 'blue'
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print('point1')
+    print(point1.x)
+    print(point1.y)
+    circle.attach_to(window)
+    rectangle = rg.Rectangle(point2, point3)
+    rectangle.outline_thickness = 2
+    print(rectangle.outline_thickness)
+    print(rectangle.fill_color)
+    print('point2')
+    print(point2.x)
+    print(point2.y)
+    rectangle.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -109,8 +135,27 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+    window = rg.RoseWindow()
+    point1 = rg.Point(20,30)
+    point2 = rg.Point(100,75)
+    point3 = rg.Point(150,200)
+    point4 = rg.Point(200,1)
+    line1 = rg.Line(point1, point2)
+    print(line1.get_midpoint())
+    print(line1.get_midpoint().x)
+    print(line1.get_midpoint().y)
+    line1.attach_to(window)
+    line2 = rg.Line(point3, point4)
+    line2.thickness = 6
+    print(line2.get_midpoint())
+    print(line2.get_midpoint().x)
+    print(line2.get_midpoint().y)
+    line2.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # -------------------------------------------------------------------------
 
 
