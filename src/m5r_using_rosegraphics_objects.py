@@ -55,7 +55,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #                   Three Instance Variables: center, fill_circle, and outline_color.
 #
 #     f. What does a RoseWindow RENDER method do?
-#            Render generates the image of the RoseWindow.
+#            Render draws all of the shapes on the window.
 #
 #     g. When is a RoseWindow close_on_mouse_click method call necessary?  Why?
 #            When the program finishes because if the program does not have the the method called, the window would close
